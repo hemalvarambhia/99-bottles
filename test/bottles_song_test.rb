@@ -3,14 +3,14 @@ require 'minitest/autorun'
 class BottlesSongTest < Minitest::Test
   def verse(number = 99)
     case number
-    when 99
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around #{number - 1} bottles of beer on the wall."
-    when 98
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around #{number - 1} bottles of beer on the wall."
     when 2
       "2 bottles of beer on the wall, 2 bottles of beer. Take one down and pass it around 1 bottle of beer on the wall."
     when 1
       "1 bottle of beer on the wall, 1 bottle of beer. Take it down and pass it around no more bottles of beer on the wall."
+    when 99
+      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around #{number - 1} bottles of beer on the wall."
+    when 98
+      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around #{number - 1} bottles of beer on the wall."
     end
   end
 
