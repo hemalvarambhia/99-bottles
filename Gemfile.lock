@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.11.3)
+
+PLATFORMS
+  universal-darwin-21
+
+DEPENDENCIES
+  minitest
+
+RUBY VERSION
+   ruby 3.0.4p208
+
+BUNDLED WITH
+   2.3.17
