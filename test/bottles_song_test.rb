@@ -8,7 +8,7 @@ class BottlesSongTest < Minitest::Test
     when 1
       "#{number} bottle of beer on the wall, #{number} bottle of beer. #{action(number)}, no more bottles of beer on the wall."
     when 2
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around #{number - 1} bottle of beer on the wall."
+      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around, #{number - 1} bottle of beer on the wall."
     else
       "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around, #{number - 1} bottles of beer on the wall."
     end
@@ -20,6 +20,8 @@ class BottlesSongTest < Minitest::Test
       "Go to the store and buy some more"
     when 1
       "Take it down and pass it around"
+    else
+
     end
   end
 
@@ -34,7 +36,7 @@ class BottlesSongTest < Minitest::Test
   end
 
   def test_verse_97
-    expected_verse = "2 bottles of beer on the wall, 2 bottles of beer. Take one down and pass it around 1 bottle of beer on the wall."
+    expected_verse = "2 bottles of beer on the wall, 2 bottles of beer. Take one down and pass it around, 1 bottle of beer on the wall."
     assert_equal(expected_verse, verse(2))
   end
 
