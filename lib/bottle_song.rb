@@ -6,13 +6,13 @@ class BottleSong
   def next_number_and_container(number)
     case number
     when 0
-      "99 bottles"
+      "99 #{container(number)}"
     when 1
-      "no more bottles"
+      "no more #{container(number - 1)}"
     when 2
-      "#{number - 1} bottle"
+      "#{number - 1} #{container(number - 1)}"
     else
-      "#{number - 1} bottles"
+      "#{number - 1} #{container(number - 1)}"
     end
   end
 
@@ -24,6 +24,17 @@ class BottleSong
       "#{number} bottle"
     else
       "#{number} bottles"
+    end
+  end
+
+  def container(number)
+    case number
+    when 0
+      "bottles"
+    when 1
+      "bottle"
+    else
+      "bottles"
     end
   end
 
