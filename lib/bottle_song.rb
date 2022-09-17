@@ -1,10 +1,6 @@
 class BottleSong
   def verse(number)
-    "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{next_number_and_container(number)} of beer on the wall."
-  end
-
-  def next_number_and_container(number)
-    "#{quantity(successive_to(number)).downcase} #{container(successive_to(number))}"
+    "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(successive_to(number)).downcase} #{container(successive_to(number))} of beer on the wall."
   end
 
   def successive_to(number)
