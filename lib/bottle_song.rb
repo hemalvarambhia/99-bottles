@@ -3,6 +3,8 @@ class BottleSong
     "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(successive_to(number)).downcase} #{container(successive_to(number))} of beer on the wall."
   end
 
+  private
+
   def successive_to(number)
     case number
     when 0
