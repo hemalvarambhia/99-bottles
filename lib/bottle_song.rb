@@ -43,6 +43,6 @@ class BottleSong
   end
 
   def successive_to(number)
-    BottleNumber.new(number).succ
+    BottleNumber.new(number).succ.to_i
   end
 end

@@ -6,11 +6,15 @@ class BottleNumber
   def succ
     case @number
     when 0
-      99
+      BottleNumber.new(99)
     when 1
-      0
+      BottleNumber.new(0)
     else
-      @number - 1
+      BottleNumber.new(@number - 1)
     end
+  end
+
+  def to_i
+    @number
   end
 end
