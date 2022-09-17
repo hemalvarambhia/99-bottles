@@ -1,9 +1,9 @@
 class BottleSong
   def verse(number)
-    "#{quantity(number)} of beer on the wall, #{quantity(number).downcase} of beer. #{action(number)}, #{next_number(number)} of beer on the wall."
+    "#{quantity_and_container(number)} of beer on the wall, #{quantity_and_container(number).downcase} of beer.\n#{action(number)}, #{next_number_and_container(number)} of beer on the wall."
   end
 
-  def next_number(number)
+  def next_number_and_container(number)
     case number
     when 0
       "99 bottles"
@@ -16,7 +16,7 @@ class BottleSong
     end
   end
 
-  def quantity(number)
+  def quantity_and_container(number)
     case number
     when 0
       "No more bottles"
