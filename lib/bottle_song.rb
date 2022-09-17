@@ -29,8 +29,6 @@ class BottleSong
 
   def container(number)
     case number
-    when 0
-      "bottles"
     when 1
       "bottle"
     else
