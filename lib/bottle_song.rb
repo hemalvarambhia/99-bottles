@@ -1,3 +1,4 @@
+require_relative './bottle_number'
 class BottleSong
   def verse(number)
     "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(successive_to(number)).downcase} #{container(successive_to(number))} of beer on the wall."
@@ -50,5 +51,6 @@ class BottleSong
     else
       number - 1
     end
+    BottleNumber.new(number).successive_to(number)
   end
 end
