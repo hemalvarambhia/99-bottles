@@ -10,7 +10,7 @@ class BottlesSongTest < Minitest::Test
     when 2
       "#{quantity(number)} of beer on the wall, #{quantity(number).downcase} of beer. #{action(number)}, #{next_number(number)} of beer on the wall."
     else
-      "#{quantity(number)} of beer on the wall, #{quantity(number).downcase} of beer. #{action(number)}, #{number - 1} bottles of beer on the wall."
+      "#{quantity(number)} of beer on the wall, #{quantity(number).downcase} of beer. #{action(number)}, #{next_number(number)} of beer on the wall."
     end
   end
 
@@ -22,6 +22,8 @@ class BottlesSongTest < Minitest::Test
       "no more bottles"
     when 2
       "#{number - 1} bottle"
+    else
+      "#{number - 1} bottles"
     end
   end
 
