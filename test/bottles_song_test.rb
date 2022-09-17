@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 
 class BottlesSongTest < Minitest::Test
-  def verse(number = 99)
+  def verse(number)
     "#{quantity(number)} of beer on the wall, #{quantity(number).downcase} of beer. #{action(number)}, #{next_number(number)} of beer on the wall."
   end
 
