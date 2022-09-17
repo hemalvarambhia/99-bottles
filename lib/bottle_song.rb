@@ -10,9 +10,9 @@ class BottleSong
     when 1
       "#{successive_to(number)} #{container(number - 1)}"
     when 2
-      "#{number - 1} #{container(number - 1)}"
+      "#{successive_to(number)} #{container(number - 1)}"
     else
-      "#{number - 1} #{container(number - 1)}"
+      "#{successive_to(number)} #{container(number - 1)}"
     end
   end
 
@@ -22,6 +22,8 @@ class BottleSong
       "99"
     when 1
       "no more"
+    else
+      (number - 1).to_s
     end
   end
 
