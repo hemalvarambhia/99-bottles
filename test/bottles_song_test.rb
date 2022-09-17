@@ -8,9 +8,9 @@ class BottlesSongTest < Minitest::Test
     when 1
       "#{number} bottle of beer on the wall, #{number} bottle of beer. #{action(number)}, no more bottles of beer on the wall."
     when 2
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around, #{number - 1} bottle of beer on the wall."
+      "#{number} bottles of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottle of beer on the wall."
     else
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. Take one down and pass it around, #{number - 1} bottles of beer on the wall."
+      "#{number} bottles of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottles of beer on the wall."
     end
   end
 
@@ -21,7 +21,7 @@ class BottlesSongTest < Minitest::Test
     when 1
       "Take it down and pass it around"
     else
-
+      "Take one down and pass it around"
     end
   end
 
