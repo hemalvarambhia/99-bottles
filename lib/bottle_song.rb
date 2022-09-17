@@ -1,6 +1,6 @@
 class BottleSong
   def verse(number)
-    "#{quantity_and_container(number)} of beer on the wall, #{quantity_and_container(number).downcase} of beer.\n#{action(number)}, #{next_number_and_container(number)} of beer on the wall."
+    "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{next_number_and_container(number)} of beer on the wall."
   end
 
   def next_number_and_container(number)
