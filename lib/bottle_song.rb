@@ -5,17 +5,6 @@ class BottleSong
 
   private
 
-  def successive_to(number)
-    case number
-    when 0
-      99
-    when 1
-      0
-    else
-      number - 1
-    end
-  end
-
   def quantity(number)
     case number
     when 0
@@ -49,6 +38,17 @@ class BottleSong
       "it"
     else
       "one"
+    end
+  end
+
+  def successive_to(number)
+    case number
+    when 0
+      99
+    when 1
+      0
+    else
+      number - 1
     end
   end
 end
