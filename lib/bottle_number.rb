@@ -3,6 +3,10 @@ class BottleNumber
     @number = number
   end
 
+  def succ
+    successive_to(@number)
+  end
+
   def successive_to(number)
     case number
     when 0
