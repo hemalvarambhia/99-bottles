@@ -43,14 +43,6 @@ class BottleSong
   end
 
   def successive_to(number)
-    case number
-    when 0
-      99
-    when 1
-      0
-    else
-      number - 1
-    end
     BottleNumber.new(number).successive_to(number)
   end
 end
