@@ -4,13 +4,24 @@ class BottlesSongTest < Minitest::Test
   def verse(number = 99)
     case number
     when 0
-      "No more bottles of beer on the wall, no more bottles of beer. #{action(number)}, 99 bottles of beer on the wall."
+      "#{quantity(number)} of beer on the wall, no more bottles of beer. #{action(number)}, 99 bottles of beer on the wall."
     when 1
-      "#{number} bottle of beer on the wall, #{number} bottle of beer. #{action(number)}, no more bottles of beer on the wall."
+      "#{quantity(number)} of beer on the wall, #{number} bottle of beer. #{action(number)}, no more bottles of beer on the wall."
     when 2
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottle of beer on the wall."
+      "#{quantity(number)} of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottle of beer on the wall."
     else
-      "#{number} bottles of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottles of beer on the wall."
+      "#{quantity(number)} of beer on the wall, #{number} bottles of beer. #{action(number)}, #{number - 1} bottles of beer on the wall."
+    end
+  end
+
+  def quantity(number)
+    case number
+    when 0
+      "No more bottles"
+    when 1
+      "#{number} bottle"
+    else
+      "#{number} bottles"
     end
   end
 
