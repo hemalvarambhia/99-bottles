@@ -7,12 +7,8 @@ class BottleSong
     case number
     when 0
       "#{quantity(successive_to(number))} #{container(number)}"
-    when 1
-      "#{quantity(successive_to(number)).downcase} #{container(number - 1)}"
-    when 2
-      "#{quantity(successive_to(number))} #{container(number - 1)}"
     else
-      "#{quantity(successive_to(number))} #{container(number - 1)}"
+      "#{quantity(successive_to(number)).downcase} #{container(number - 1)}"
     end
   end
 
