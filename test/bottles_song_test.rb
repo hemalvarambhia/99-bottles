@@ -34,11 +34,20 @@ class BottlesSongTest < Minitest::Test
     when 0
       "Go to the store and buy some more"
     when 1
-      pronoun = "it"
+      pronoun = pronoun(number)
       "Take #{pronoun} down and pass it around"
     else
-      pronoun = "one"
+      pronoun = pronoun(number)
       "Take #{pronoun} down and pass it around"
+    end
+  end
+
+  def pronoun(number)
+    case number
+    when 1
+      "it"
+    else
+      "one"
     end
   end
 
