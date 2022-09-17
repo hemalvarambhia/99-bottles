@@ -19,11 +19,11 @@ class BottleSong
   def quantity_and_container(number)
     case number
     when 0
-      "No more bottles"
+      "No more #{container(number)}"
     when 1
-      "#{number} bottle"
+      "#{number} #{container(number)}"
     else
-      "#{number} bottles"
+      "#{number} #{container(number)}"
     end
   end
 
