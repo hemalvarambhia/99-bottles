@@ -6,13 +6,22 @@ class BottleSong
   def next_number_and_container(number)
     case number
     when 0
-      "99 #{container(number)}"
+      "#{successive_to(number)} #{container(number)}"
     when 1
-      "no more #{container(number - 1)}"
+      "#{successive_to(number)} #{container(number - 1)}"
     when 2
       "#{number - 1} #{container(number - 1)}"
     else
       "#{number - 1} #{container(number - 1)}"
+    end
+  end
+
+  def successive_to(number)
+    case number
+    when 0
+      "99"
+    when 1
+      "no more"
     end
   end
 
