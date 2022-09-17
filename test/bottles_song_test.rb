@@ -33,8 +33,6 @@ class BottlesSongTest < Minitest::Test
     case number
     when 0
       "Go to the store and buy some more"
-    when 1
-      "Take #{pronoun(number)} down and pass it around"
     else
       "Take #{pronoun(number)} down and pass it around"
     end
