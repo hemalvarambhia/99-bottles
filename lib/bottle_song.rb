@@ -17,14 +17,7 @@ class BottleSong
   end
 
   def quantity_and_container(number)
-    case number
-    when 0
-      "#{quantity(number)} #{container(number)}"
-    when 1
-      "#{quantity(number)} #{container(number)}"
-    else
-      "#{quantity(number)} #{container(number)}"
-    end
+    "#{quantity(number)} #{container(number)}"
   end
 
   def quantity(number)
