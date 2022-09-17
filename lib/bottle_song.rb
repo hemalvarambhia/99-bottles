@@ -8,7 +8,7 @@ class BottleSong
     when 0
       "#{successive_to(number)} #{container(number)}"
     when 1
-      "#{successive_to(number)} #{container(number - 1)}"
+      "#{quantity(successive_to(number)).downcase} #{container(number - 1)}"
     when 2
       "#{successive_to(number)} #{container(number - 1)}"
     else
@@ -19,11 +19,11 @@ class BottleSong
   def successive_to(number)
     case number
     when 0
-      "99"
+      99
     when 1
-      "no more"
+      0
     else
-      (number - 1).to_s
+      number - 1
     end
   end
 
