@@ -6,7 +6,7 @@ class BottleSong
   def next_number_and_container(number)
     case number
     when 0
-      "#{quantity(successive_to(number))} #{container(successive_to(number))}"
+      "#{quantity(successive_to(number)).downcase} #{container(successive_to(number))}"
     else
       "#{quantity(successive_to(number)).downcase} #{container(successive_to(number))}"
     end
