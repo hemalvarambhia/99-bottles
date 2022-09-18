@@ -17,6 +17,7 @@ class BottleSong
     else
       "bottles"
     end
+    BottleNumber.new(number).container
   end
 
   def action(number)
