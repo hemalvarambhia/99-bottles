@@ -8,7 +8,7 @@ class BottleNumber
     when 0
       BottleNumber.new(99)
     when 1
-      BottleNumber.new(0)
+      BottleNumber.new(@number - 1)
     else
       BottleNumber.new(@number - 1)
     end
