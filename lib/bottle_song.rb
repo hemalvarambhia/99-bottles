@@ -2,7 +2,7 @@ require_relative './bottle_number'
 class BottleSong
   def verse(number)
     current_bottle_number = BottleNumber.new(number)
-    "#{quantity(current_bottle_number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(number_after(number)).downcase} #{container(number_after(number))} of beer on the wall."
+    "#{quantity(current_bottle_number)} #{container(number)} of beer on the wall, #{quantity(current_bottle_number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(number_after(number)).downcase} #{container(number_after(number))} of beer on the wall."
   end
 
   private
