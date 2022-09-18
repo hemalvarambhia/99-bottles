@@ -4,24 +4,28 @@ class BottleNumber
   end
 
   def succ
-    case @number
+    case number
     when 0
       BottleNumber.new(99)
     else
-      BottleNumber.new(@number - 1)
+      BottleNumber.new(number - 1)
     end
   end
 
   def to_i
-    @number
+    number
   end
 
   def to_s
-    case @number
+    case number
     when 0
       "No more"
     else
-      @number.to_s
+      number.to_s
     end
   end
+
+  private
+
+  attr_reader :number
 end
