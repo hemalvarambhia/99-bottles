@@ -1,7 +1,7 @@
 require_relative './bottle_number'
 class BottleSong
   def verse(number)
-    "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(successive_to(number)).downcase} #{container(successive_to(number))} of beer on the wall."
+    "#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number).downcase} #{container(number)} of beer.\n#{action(number)}, #{quantity(number_after(number)).downcase} #{container(number_after(number))} of beer on the wall."
   end
 
   private
@@ -37,7 +37,7 @@ class BottleSong
     end
   end
 
-  def successive_to(number)
+  def number_after(number)
     BottleNumber.new(number).succ.to_i
   end
 end
