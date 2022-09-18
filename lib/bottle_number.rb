@@ -12,6 +12,15 @@ class BottleNumber
     end
   end
 
+  def action
+    case number
+    when 0
+      "Go to the store and buy some more"
+    else
+      "Take #{pronoun} down and pass it around"
+    end
+  end
+
   def pronoun
     case number
     when 1

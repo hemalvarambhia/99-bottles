@@ -15,12 +15,7 @@ class BottleSong
   end
 
   def action(number)
-    case number
-    when 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun(number)} down and pass it around"
-    end
+    BottleNumber.new(number).action
   end
 
   def pronoun(number)
