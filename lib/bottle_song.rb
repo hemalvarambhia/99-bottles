@@ -27,10 +27,6 @@ class BottleSong
     BottleNumber.new(number).action
   end
 
-  def pronoun(number)
-    BottleNumber.new(number).pronoun
-  end
-
   def number_after(number)
     BottleNumber.new(number).succ
   end
