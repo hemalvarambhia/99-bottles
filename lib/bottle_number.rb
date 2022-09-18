@@ -12,6 +12,15 @@ class BottleNumber
     end
   end
 
+  def pronoun
+    case number
+    when 1
+      "it"
+    else
+      "one"
+    end
+  end
+
   def succ
     case number
     when 0
