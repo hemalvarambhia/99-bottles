@@ -7,12 +7,7 @@ class BottleSong
   private
 
   def quantity(number)
-    case number
-    when 0
-      "No more"
-    else
-      number.to_s
-    end
+    BottleNumber.new(number).to_s
   end
 
   def container(number)
