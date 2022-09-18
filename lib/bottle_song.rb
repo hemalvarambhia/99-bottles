@@ -30,6 +30,7 @@ class BottleSong
     else
       "one"
     end
+    BottleNumber.new(number).pronoun
   end
 
   def number_after(number)
