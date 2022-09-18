@@ -20,10 +20,6 @@ class BottleSong
   end
 
   def number_after(number)
-    if number.is_a?(BottleNumber)
-      number.succ
-    else
-      BottleNumber.new(number).succ
-    end
+    number.succ
   end
 end
