@@ -8,11 +8,7 @@ class BottleSong
   private
 
   def quantity(number)
-    if number.is_a?(BottleNumber)
-      number.to_s
-    else
-      BottleNumber.new(number).to_s
-    end
+    number.to_s
   end
 
   def container(number)
