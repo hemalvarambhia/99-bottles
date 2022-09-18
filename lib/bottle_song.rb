@@ -24,12 +24,6 @@ class BottleSong
   end
 
   def pronoun(number)
-    case number
-    when 1
-      "it"
-    else
-      "one"
-    end
     BottleNumber.new(number).pronoun
   end
 
