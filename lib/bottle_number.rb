@@ -7,8 +7,6 @@ class BottleNumber
     case @number
     when 0
       BottleNumber.new(99)
-    when 1
-      BottleNumber.new(@number - 1)
     else
       BottleNumber.new(@number - 1)
     end
