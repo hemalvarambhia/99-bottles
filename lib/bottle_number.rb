@@ -43,7 +43,7 @@ class BottleNumber
     number
   end
 
-  def to_s
+  def quantity
     case number
     when 0
       "No more"
