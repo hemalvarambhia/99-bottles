@@ -12,11 +12,7 @@ class BottleSong
   end
 
   def container(number)
-    if number.is_a?(BottleNumber)
-      number.container
-    else
-      BottleNumber.new(number).container
-    end
+    number.container
   end
 
   def action(number)
