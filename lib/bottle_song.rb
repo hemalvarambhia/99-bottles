@@ -11,12 +11,6 @@ class BottleSong
   end
 
   def container(number)
-    case number
-    when 1
-      "bottle"
-    else
-      "bottles"
-    end
     BottleNumber.new(number).container
   end
 
