@@ -24,10 +24,18 @@ class BottleSong
   end
 
   def action(number)
-    BottleNumber.new(number).action
+    if number.is_a?(BottleNumber)
+      number.action
+    else
+      BottleNumber.new(number).action
+    end
   end
 
   def number_after(number)
-    BottleNumber.new(number).succ
+    if number.is_a?(BottleNumber)
+      number.succ
+    else
+      BottleNumber.new(number).succ
+    end
   end
 end
