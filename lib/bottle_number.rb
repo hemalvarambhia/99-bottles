@@ -3,6 +3,15 @@ class BottleNumber
     @number = number
   end
 
+  def container
+    case number
+    when 1
+      "bottle"
+    else
+      "bottles"
+    end
+  end
+
   def succ
     case number
     when 0
