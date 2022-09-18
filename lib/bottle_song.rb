@@ -16,11 +16,7 @@ class BottleSong
   end
 
   def action(number)
-    if number.is_a?(BottleNumber)
-      number.action
-    else
-      BottleNumber.new(number).action
-    end
+    number.action
   end
 
   def number_after(number)
