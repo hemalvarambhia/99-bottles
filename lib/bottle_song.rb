@@ -1,5 +1,9 @@
 require_relative './bottle_number'
 class BottleSong
+  def song
+    99.downto(0).map {|number| verse(number) }.join("\n")
+  end
+
   def verse(number)
     current_bottle_number = BottleNumber.new(number)
     next_bottle_number = current_bottle_number.succ

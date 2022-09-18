@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require_relative '../lib/bottle_song'
 class BottlesSongTest < Minitest::Test
   def song
-    99.downto(0).map {|number| verse(number) }.join("\n")
+    BottleSong.new.song
   end
 
   def verse(number)
