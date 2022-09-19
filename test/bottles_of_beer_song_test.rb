@@ -4,7 +4,7 @@ class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
     when 0
-    "No more bottles of beer on the wall, no more bottles of beer.\n" +
+    "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
       "Go to the store and by some more, 99 bottles of beer on the wall.\n"
     when 1
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
@@ -20,6 +20,8 @@ class BottlesOfBeerSongTest < Minitest::Test
 
   def quantity_and_bottles(number)
     case number
+    when 0
+      "No more bottles"
     when 1
       "#{number} bottle"
     else
