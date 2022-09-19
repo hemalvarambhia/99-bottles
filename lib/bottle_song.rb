@@ -5,8 +5,8 @@ class BottleSong
   end
 
   def verse(number)
-    current_bottle_number = BottleVerse.new(number)
-    next_bottle_number = current_bottle_number.succ
-    "#{current_bottle_number.quantity} #{current_bottle_number.container} of beer on the wall, #{current_bottle_number.quantity.downcase} #{current_bottle_number.container} of beer.\n#{current_bottle_number.action}, #{next_bottle_number.quantity.downcase} #{next_bottle_number.container} of beer on the wall."
+    current_verse = BottleVerse.new(number)
+    next_verse = current_verse.succ
+    "#{current_verse.quantity} #{current_verse.container} of beer on the wall, #{current_verse.quantity.downcase} #{current_verse.container} of beer.\n#{current_verse.action}, #{next_verse.quantity.downcase} #{next_verse.container} of beer on the wall."
   end
 end
