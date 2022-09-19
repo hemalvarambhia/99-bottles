@@ -1,4 +1,4 @@
-class BottleNumber
+class BottleVerse
   def initialize(number)
     @number = number
   end
@@ -33,9 +33,9 @@ class BottleNumber
   def succ
     case number
     when 0
-      BottleNumber.new(99)
+      BottleVerse.new(99)
     else
-      BottleNumber.new(number - 1)
+      BottleVerse.new(number - 1)
     end
   end
 
