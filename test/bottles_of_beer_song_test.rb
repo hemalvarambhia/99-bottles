@@ -2,8 +2,13 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
-      "Take one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
+    if number == 2
+      "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+        "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
+    else
+      "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+        "Take one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
+    end
   end
 
   def test_verse_1
@@ -20,5 +25,13 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take one down and pass it around, 97 bottles of beer on the wall.\n"
 
     assert_equal(expected_verse, verse(98))
+  end
+
+  def test_verse_98
+    expected_verse =
+      "2 bottles of beer on the wall, 2 bottles of beer.\n" +
+        "Take one down and pass it around, 1 bottle of beer on the wall.\n"
+
+    assert_equal(expected_verse, verse(2))
   end
 end
