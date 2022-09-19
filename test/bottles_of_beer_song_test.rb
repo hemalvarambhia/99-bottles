@@ -4,7 +4,7 @@ class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
     when 0
-    "No more bottles of beer on the wall, No more bottles of beer.\n" +
+    "No more bottles of beer on the wall, no more bottles of beer.\n" +
       "Go to the store and by some more, 99 bottles of beer on the wall.\n"
     when 1
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
@@ -61,7 +61,7 @@ class BottlesOfBeerSongTest < Minitest::Test
 
   def test_final_verse
     expected_verse =
-      "No more bottles of beer on the wall, No more bottles of beer.\n" +
+      "No more bottles of beer on the wall, no more bottles of beer.\n" +
         "Go to the store and by some more, 99 bottles of beer on the wall.\n"
 
     assert_equal(expected_verse, verse(0))
