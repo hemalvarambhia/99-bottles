@@ -2,10 +2,11 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    if number == 1
+    case number
+    when 1
       "#{number} bottle of beer on the wall, #{number} bottle of beer.\n" +
         "Take it down and pass it around, No more bottles of beer on the wall.\n"
-    elsif number == 2
+    when 2
       "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
     else
