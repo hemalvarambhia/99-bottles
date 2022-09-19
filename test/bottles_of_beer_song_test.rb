@@ -7,7 +7,7 @@ class BottlesOfBeerSongTest < Minitest::Test
     "No more bottles of beer on the wall, No more bottles of beer.\n" +
       "Go to the store and by some more, 99 bottles of beer on the wall.\n"
     when 1
-      "#{number} bottle of beer on the wall, #{number} bottle of beer.\n" +
+      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take it down and pass it around, No more bottles of beer on the wall.\n"
     when 2
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
@@ -19,7 +19,12 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def quantity_and_bottles(number)
-    "#{number} bottles"
+    case number
+    when 1
+      "#{number} bottle"
+    else
+      "#{number} bottles"
+    end
   end
 
   def test_verse_1
