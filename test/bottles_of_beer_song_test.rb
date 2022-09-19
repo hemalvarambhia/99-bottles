@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class BottlesOfBearSongTest < Minitest::Test
+class BottlesOfBeerSongTest < Minitest::Test
   def verse
     "99 bottle of beer on the wall, 99 bottle of beer.\n" +
       "Take one down and pass it around, 98 bottles of beer on the wall.\n"
