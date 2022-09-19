@@ -1,7 +1,7 @@
 require_relative './bottle_verse'
 class BottleSong
   def song
-    99.downto(0).map {|number| verse(number) }.join("\n")
+    99.downto(0).map { |number| verse(number) }.join("\n")
   end
 
   def verse(number)
