@@ -5,10 +5,19 @@ class BottlesOfBeerSongTest < Minitest::Test
     case number
     when 0
     "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-      "Go to the store and by some more, 99 bottles of beer on the wall.\n"
+      "Go to the store and by some more, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, #{quantity_and_bottles(number - 1)} of beer on the wall.\n"
+        "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
+    end
+  end
+
+  def number_successive_to(number)
+    case number
+    when 0
+      99
+    else
+      number - 1
     end
   end
 
