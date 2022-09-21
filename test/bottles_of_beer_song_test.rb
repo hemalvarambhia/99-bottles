@@ -8,13 +8,13 @@ class BottlesOfBeerSongTest < Minitest::Test
       "Go to the store and by some more, 99 bottles of beer on the wall.\n"
     when 1
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, No more bottles of beer on the wall.\n"
+        "#{action(number)}, #{quantity_and_bottles(number - 1)} of beer on the wall.\n"
     when 2
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, #{number - 1} bottle of beer on the wall.\n"
+        "#{action(number)}, #{quantity_and_bottles(number - 1)} of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, #{number - 1} bottles of beer on the wall.\n"
+        "#{action(number)}, #{quantity_and_bottles(number - 1)} of beer on the wall.\n"
     end
   end
 
