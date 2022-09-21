@@ -4,8 +4,8 @@ class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
     when 0
-    "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-      "Go to the store and by some more, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
+      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
+        "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
         "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
@@ -35,6 +35,8 @@ class BottlesOfBeerSongTest < Minitest::Test
   def action(number)
     if number == 1
       "Take it down and pass it around"
+    elsif number == 0
+      "Go to the store and by some more"
     else
       "Take one down and pass it around"
     end
