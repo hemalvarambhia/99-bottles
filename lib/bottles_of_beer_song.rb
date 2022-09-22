@@ -8,14 +8,14 @@ class BottlesOfBeerSong
   private
 
   def number_successive_to(number)
-    BottlesOfBeerVerse.new(number).number_successive_to(number)
+    BottlesOfBeerVerse.new(number).number_successive_to
   end
 
   def quantity_and_bottles(number)
-    BottlesOfBeerVerse.new(number).quantity_and_bottles(number)
+    BottlesOfBeerVerse.new(number).quantity_and_bottles
   end
 
   def action(number)
-    BottlesOfBeerVerse.new(number).action(number)
+    BottlesOfBeerVerse.new(number).action
   end
 end
