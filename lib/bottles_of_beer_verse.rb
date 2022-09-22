@@ -4,27 +4,27 @@ class BottlesOfBeerVerse
   end
 
   def number_successive_to
-    case self.number
+    case number
     when 0
       99
     else
-      self.number - 1
+      number - 1
     end
   end
 
   def quantity_and_bottles
-    case self.number
+    case number
     when 0
       "No more bottles"
     when 1
-      "#{self.number} bottle"
+      "#{number} bottle"
     else
-      "#{self.number} bottles"
+      "#{number} bottles"
     end
   end
 
   def action
-    case self.number
+    case number
     when 0
       "Go to the store and by some more"
     when 1
