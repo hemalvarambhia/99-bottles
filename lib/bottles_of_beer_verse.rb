@@ -1,5 +1,5 @@
 class BottlesOfBeerVerse
-  def initialize(number = 1)
+  def initialize(number)
     @number = number
   end
 
