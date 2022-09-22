@@ -3,7 +3,7 @@ class BottlesOfBeerVerse
     @number = number
   end
 
-  def number_successive_to(number = 0)
+  def number_successive_to
     case self.number
     when 0
       99
@@ -12,7 +12,7 @@ class BottlesOfBeerVerse
     end
   end
 
-  def quantity_and_bottles(number = 0)
+  def quantity_and_bottles
     case self.number
     when 0
       "No more bottles"
@@ -23,7 +23,7 @@ class BottlesOfBeerVerse
     end
   end
 
-  def action(number = 0)
+  def action
     case self.number
     when 0
       "Go to the store and by some more"
