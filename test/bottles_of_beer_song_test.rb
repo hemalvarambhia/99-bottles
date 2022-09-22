@@ -27,10 +27,11 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def action(number)
-    if number == 1
-      "Take it down and pass it around"
-    elsif number == 0
+    case number
+    when 0
       "Go to the store and by some more"
+    when 1
+      "Take it down and pass it around"
     else
       "Take one down and pass it around"
     end
