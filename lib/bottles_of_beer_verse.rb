@@ -13,13 +13,13 @@ class BottlesOfBeerVerse
   end
 
   def quantity_and_bottles(number)
-    case number
+    case self.number
     when 0
       "No more bottles"
     when 1
-      "#{number} bottle"
+      "#{self.number} bottle"
     else
-      "#{number} bottles"
+      "#{self.number} bottles"
     end
   end
 
