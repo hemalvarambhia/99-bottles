@@ -24,7 +24,7 @@ class BottlesOfBeerVerse
   end
 
   def action(number)
-    case number
+    case self.number
     when 0
       "Go to the store and by some more"
     when 1
