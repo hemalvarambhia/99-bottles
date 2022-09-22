@@ -4,11 +4,11 @@ class BottlesOfBeerVerse
   end
 
   def number_successive_to(number)
-    case number
+    case self.number
     when 0
       99
     else
-      number - 1
+      self.number - 1
     end
   end
 
