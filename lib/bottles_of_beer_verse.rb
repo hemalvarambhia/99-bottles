@@ -1,4 +1,8 @@
 class BottlesOfBeerVerse
+  def initialize(number = 1)
+    @number = number
+  end
+
   def number_successive_to(number)
     case number
     when 0
@@ -29,4 +33,8 @@ class BottlesOfBeerVerse
       "Take one down and pass it around"
     end
   end
+
+  private
+
+  attr_reader :number
 end
