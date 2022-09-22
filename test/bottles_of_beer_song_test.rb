@@ -2,14 +2,8 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    case number
-    when 0
-      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
-    else
-      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
-    end
+    "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
+      "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
   end
 
   def number_successive_to(number)
