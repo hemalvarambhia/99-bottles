@@ -1,8 +1,9 @@
 require_relative './bottles_of_beer_verse'
 class BottlesOfBeerSong
   def verse(number)
-    "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-      "#{action(number)}, #{quantity_and_bottles(number_successive_to(number).to_i)} of beer on the wall.\n"
+    verse = BottlesOfBeerVerse.new(number)
+    "#{quantity_and_bottles(number, verse)} of beer on the wall, #{quantity_and_bottles(number, verse).downcase} of beer.\n" +
+      "#{action(number, verse)}, #{quantity_and_bottles(number_successive_to(number, verse).to_i)} of beer on the wall.\n"
   end
 
   private
