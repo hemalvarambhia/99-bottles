@@ -15,9 +15,18 @@ class BottlesOfBeerVerse
   def quantity_and_bottles
     case number
     when 0
-      "No more #{container}"
+      "#{quantity} #{container}"
     else
-      "#{number} #{container}"
+      "#{quantity} #{container}"
+    end
+  end
+
+  def quantity
+    case number
+    when 0
+      "No more"
+    else
+      number.to_s
     end
   end
 
