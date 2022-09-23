@@ -14,8 +14,7 @@ class BottlesOfBeerSong
   end
 
   def quantity_and_bottles(number = nil, bottle_verse = nil)
-    bottles_of_beer_verse_new = BottlesOfBeerVerse.new(number)
-    "#{bottles_of_beer_verse_new.quantity} #{bottles_of_beer_verse_new.container}"
+    "#{bottle_verse.quantity} #{bottle_verse.container}"
   end
 
   def action(number, bottle_verse = nil)
