@@ -16,8 +16,6 @@ class BottlesOfBeerVerse
     case number
     when 0
       "No more #{container}"
-    when 1
-      "#{number} #{container}"
     else
       "#{number} #{container}"
     end
