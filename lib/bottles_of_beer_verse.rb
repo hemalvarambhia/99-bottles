@@ -13,12 +13,7 @@ class BottlesOfBeerVerse
   end
 
   def quantity_and_bottles
-    case number
-    when 0
-      "#{quantity} #{container}"
-    else
-      "#{quantity} #{container}"
-    end
+    "#{quantity} #{container}"
   end
 
   def quantity
