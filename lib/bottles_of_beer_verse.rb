@@ -6,9 +6,9 @@ class BottlesOfBeerVerse
   def number_successive_to
     case number
     when 0
-      99
+      BottlesOfBeerVerse.new(99).to_i
     else
-      number - 1
+      BottlesOfBeerVerse.new(number - 1).to_i
     end
   end
 
@@ -39,6 +39,10 @@ class BottlesOfBeerVerse
     else
       "Take one down and pass it around"
     end
+  end
+
+  def to_i
+    number
   end
 
   private
