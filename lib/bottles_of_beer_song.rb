@@ -7,16 +7,16 @@ class BottlesOfBeerSong
 
   private
 
-  def number_successive_to(number)
+  def number_successive_to(number, bottle_verse = nil)
     BottlesOfBeerVerse.new(number).number_successive_to
   end
 
-  def quantity_and_bottles(number)
+  def quantity_and_bottles(number, bottle_verse = nil)
     bottles_of_beer_verse_new = BottlesOfBeerVerse.new(number)
     "#{bottles_of_beer_verse_new.quantity} #{bottles_of_beer_verse_new.container}"
   end
 
-  def action(number)
+  def action(number, bottle_verse = nil)
     BottlesOfBeerVerse.new(number).action
   end
 end
