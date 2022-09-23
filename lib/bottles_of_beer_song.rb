@@ -18,6 +18,6 @@ class BottlesOfBeerSong
   end
 
   def action(number, bottle_verse = nil)
-    BottlesOfBeerVerse.new(number).action
+    bottle_verse.action
   end
 end
