@@ -9,7 +9,7 @@ class BottlesOfBeerSong
   private
 
   def number_successive_to(number, bottle_verse = nil)
-    BottlesOfBeerVerse.new(number).number_successive_to
+    bottle_verse.number_successive_to
   end
 
   def quantity_and_bottles(number, bottle_verse = nil)
