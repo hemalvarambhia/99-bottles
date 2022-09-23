@@ -2,7 +2,7 @@ require_relative './bottles_of_beer_verse'
 class BottlesOfBeerSong
   def verse(number)
     "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-      "#{action(number)}, #{quantity_and_bottles(number_successive_to(number))} of beer on the wall.\n"
+      "#{action(number)}, #{quantity_and_bottles(number_successive_to(number).to_i)} of beer on the wall.\n"
   end
 
   private
