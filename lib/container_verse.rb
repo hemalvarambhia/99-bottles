@@ -7,6 +7,8 @@ class ContainerVerse
     case number
     when 0
       ContainerVerse0.new(number).number_successive_to
+    when 1
+      ContainerVerse1.new(number).number_successive_to
     else
       ContainerVerse.new(number - 1)
     end
@@ -16,6 +18,8 @@ class ContainerVerse
     case number
     when 0
       ContainerVerse0.new(number).quantity
+    when 1
+      ContainerVerse1.new(number).quantity
     else
       number.to_s
     end
@@ -26,7 +30,7 @@ class ContainerVerse
     when 0
       ContainerVerse0.new(number).container
     when 1
-      "bottle"
+      ContainerVerse1.new(number).container
     else
       "bottles"
     end
@@ -36,6 +40,8 @@ class ContainerVerse
     case number
     when 0
       ContainerVerse0.new(0).action
+    when 1
+      ContainerVerse1.new(number).action
     else
       "Take #{pronoun(number)} down and pass it around"
     end
@@ -74,5 +80,23 @@ class ContainerVerse0 < ContainerVerse
 
   def number_successive_to
     ContainerVerse.new(99)
+  end
+end
+
+class ContainerVerse1 < ContainerVerse
+  def container
+    "bottle"
+  end
+
+  def quantity
+    number.to_s
+  end
+
+  def action
+    "Take #{pronoun(number)} down and pass it around"
+  end
+
+  def number_successive_to
+    ContainerVerse0.new(0)
   end
 end
