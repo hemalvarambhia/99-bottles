@@ -39,7 +39,7 @@ class ContainerVerse
   def action
     case number
     when 0
-      ContainerVerse0.new(0).action
+      ContainerVerse0.new(number).action
     when 1
       ContainerVerse1.new(number).action
     else
