@@ -1,7 +1,7 @@
-require_relative './bottles_of_beer_verse'
+require_relative './container_verse'
 class BottlesOfBeerSong
   def verse(number)
-    verse = BottlesOfBeerVerse.new(number)
+    verse = ContainerVerse.new(number)
     next_verse = verse.number_successive_to
     "#{quantity_and_bottles(verse)} of beer on the wall, #{quantity_and_bottles(verse).downcase} of beer.\n" +
       "#{action(verse)}, #{quantity_and_bottles(next_verse)} of beer on the wall.\n"

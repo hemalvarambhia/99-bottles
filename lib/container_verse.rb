@@ -1,4 +1,4 @@
-class BottlesOfBeerVerse
+class ContainerVerse
   def initialize(number)
     @number = number
   end
@@ -6,9 +6,9 @@ class BottlesOfBeerVerse
   def number_successive_to
     case number
     when 0
-      BottlesOfBeerVerse.new(99)
+      ContainerVerse.new(99)
     else
-      BottlesOfBeerVerse.new(number - 1)
+      ContainerVerse.new(number - 1)
     end
   end
 
