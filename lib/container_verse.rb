@@ -79,12 +79,13 @@ class ContainerVerse0 < ContainerVerse
 end
 
 class ContainerVerse1 < ContainerVerse
-  def container
-    "bottle"
-  end
-
   def quantity
     number.to_s
+  end
+
+
+  def container
+    "bottle"
   end
 
   def action
