@@ -48,12 +48,7 @@ class ContainerVerse
   end
 
   def pronoun(number)
-    case number
-    when 1
-      "it"
-    else
-      "one"
-    end
+    "one"
   end
 
   def to_i
@@ -94,6 +89,10 @@ class ContainerVerse1 < ContainerVerse
 
   def action
     "Take #{pronoun(number)} down and pass it around"
+  end
+
+  def pronoun(number)
+    "it"
   end
 
   def number_successive_to
