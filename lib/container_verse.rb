@@ -37,7 +37,7 @@ class ContainerVerse
     when 1
       "Take #{pronoun(number)} down and pass it around"
     else
-      "Take one down and pass it around"
+      "Take #{pronoun(number)} down and pass it around"
     end
   end
 
@@ -45,6 +45,8 @@ class ContainerVerse
     case number
     when 1
       "it"
+    else
+      "one"
     end
   end
 
