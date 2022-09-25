@@ -34,8 +34,6 @@ class ContainerVerse
     case number
     when 0
       "Go to the store and by some more"
-    when 1
-      "Take #{pronoun(number)} down and pass it around"
     else
       "Take #{pronoun(number)} down and pass it around"
     end
