@@ -35,9 +35,16 @@ class ContainerVerse
     when 0
       "Go to the store and by some more"
     when 1
-      "Take it down and pass it around"
+      "Take #{pronoun(number)} down and pass it around"
     else
       "Take one down and pass it around"
+    end
+  end
+
+  def pronoun(number)
+    case number
+    when 1
+      "it"
     end
   end
 
