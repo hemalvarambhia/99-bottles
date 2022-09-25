@@ -83,7 +83,6 @@ class ContainerVerse1 < ContainerVerse
     number.to_s
   end
 
-
   def container
     "bottle"
   end
