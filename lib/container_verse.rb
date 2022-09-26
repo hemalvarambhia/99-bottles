@@ -8,14 +8,7 @@ class ContainerVerse
   end
 
   def quantity
-    case number
-    when 0
-      ContainerVerse0.new(number).quantity
-    when 1
-      ContainerVerse1.new(number).quantity
-    else
-      number.to_s
-    end
+    number.to_s
   end
 
   def container
