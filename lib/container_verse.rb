@@ -12,14 +12,7 @@ class ContainerVerse
   end
 
   def container
-    case number
-    when 0
-      ContainerVerse0.new(number).container
-    when 1
-      ContainerVerse1.new(number).container
-    else
-      "bottles"
-    end
+    "bottles"
   end
 
   def action
