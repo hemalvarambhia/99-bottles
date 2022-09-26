@@ -99,3 +99,9 @@ class ContainerVerse1 < ContainerVerse
     ContainerVerse0.new(0)
   end
 end
+
+class ContainerVerse2 < ContainerVerse
+  def number_successive_to
+    ContainerVerse1.new(1)
+  end
+end
