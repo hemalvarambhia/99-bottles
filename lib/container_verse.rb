@@ -55,10 +55,6 @@ class ContainerVerse1 < ContainerVerse
     "bottle"
   end
 
-  def action
-    "Take #{pronoun(number)} down and pass it around"
-  end
-
   def pronoun(number)
     "it"
   end
