@@ -16,14 +16,7 @@ class ContainerVerse
   end
 
   def action
-    case number
-    when 0
-      ContainerVerse0.new(number).action
-    when 1
-      ContainerVerse1.new(number).action
-    else
-      "Take #{pronoun(number)} down and pass it around"
-    end
+    "Take #{pronoun(number)} down and pass it around"
   end
 
   def pronoun(number)
