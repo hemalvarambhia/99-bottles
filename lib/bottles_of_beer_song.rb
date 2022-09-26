@@ -10,16 +10,11 @@ class BottlesOfBeerSong
   private
 
   def verse_for(number)
-    case number
-    when 0
-      ContainerVerse0.new(number)
-    when 1
-      ContainerVerse1.new(number)
-    when 2
-      ContainerVerse2.new(number)
-    else
-      ContainerVerse.new(number)
-    end
+    {
+      0 => ContainerVerse0.new(number),
+      1 => ContainerVerse1.new(number),
+      2 => ContainerVerse2.new(number)
+    }.fetch(number, ContainerVerse.new(number))
   end
 
   def quantity_and_bottles(bottle_verse)
