@@ -4,14 +4,7 @@ class ContainerVerse
   end
 
   def number_successive_to
-    case number
-    when 0
-      ContainerVerse0.new(number).number_successive_to
-    when 1
-      ContainerVerse1.new(number).number_successive_to
-    else
-      ContainerVerse.new(number - 1)
-    end
+    ContainerVerse.new(number - 1)
   end
 
   def quantity
