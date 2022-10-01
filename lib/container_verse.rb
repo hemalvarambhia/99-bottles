@@ -30,10 +30,6 @@ class ContainerVerse
     "one"
   end
 
-  def to_i
-    number
-  end
-
   private
 
   attr_reader :number
