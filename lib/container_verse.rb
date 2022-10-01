@@ -73,7 +73,5 @@ class ContainerVerse1 < ContainerVerse
 end
 
 class ContainerVerse2 < ContainerVerse
-  def number_successive_to
-    ContainerVerse.for(number - 1)
-  end
+
 end
