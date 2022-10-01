@@ -70,7 +70,3 @@ class ContainerVerse1 < ContainerVerse
     ContainerVerse.for(0)
   end
 end
-
-class ContainerVerse2 < ContainerVerse
-
-end
