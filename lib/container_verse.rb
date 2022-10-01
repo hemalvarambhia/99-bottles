@@ -2,8 +2,7 @@ class ContainerVerse
   def self.for(number)
     {
       0 => ContainerVerse0.new(number),
-      1 => ContainerVerse1.new(number),
-      2 => ContainerVerse2.new(number)
+      1 => ContainerVerse1.new(number)
     }.fetch(number, ContainerVerse.new(number))
   end
 
