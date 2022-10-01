@@ -61,8 +61,4 @@ class ContainerVerse1 < ContainerVerse
   def pronoun(number)
     "it"
   end
-
-  def number_successive_to
-    ContainerVerse.for(number - 1)
-  end
 end
