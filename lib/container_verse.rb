@@ -12,7 +12,7 @@ class ContainerVerse
   end
 
   def number_successive_to
-    ContainerVerse.new(number - 1)
+    ContainerVerse.for(number - 1)
   end
 
   def quantity
@@ -54,7 +54,7 @@ class ContainerVerse0 < ContainerVerse
   end
 
   def number_successive_to
-    ContainerVerse.new(99)
+    ContainerVerse.for(99)
   end
 end
 
@@ -68,12 +68,12 @@ class ContainerVerse1 < ContainerVerse
   end
 
   def number_successive_to
-    ContainerVerse0.new(0)
+    ContainerVerse.for(0)
   end
 end
 
 class ContainerVerse2 < ContainerVerse
   def number_successive_to
-    ContainerVerse1.new(1)
+    ContainerVerse.for(number - 1)
   end
 end
