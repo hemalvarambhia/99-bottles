@@ -8,6 +8,10 @@ class BottlesOfBeerSongTest < Minitest::Test
 
     assert_equal(expected_verse, verse(99))
   end
+  
+  def verse(num)
+    "99 bottles of beer on the wall, 99 bottles of beer.\n" +
+      "Take one down and pass it around, 98 bottles of beer on the wall.\n"
 
   def test_verse_2
     expected_verse =
@@ -15,5 +19,6 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take one down and pass it around, 97 bottles of beer on the wall.\n"
 
     assert_equal(expected_verse, verse(98))
+
   end
 end
