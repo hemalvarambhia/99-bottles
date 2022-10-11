@@ -2,10 +2,15 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
 
-  def verse(num)
-    "#{num} bottles of beer on the wall, #{num} bottles of beer.\n" +
-      "Take one down and pass it around, #{num - 1} bottles of beer on the wall.\n"
+  def getBottles(num)
+    num == 1 ? "#{num} bottle" : "#{num} bottles"
   end
+
+  def verse(num)
+    "#{getBottles(num)} of beer on the wall, #{getBottles(num)} of beer.\n" +
+      "Take one down and pass it around, #{getBottles(num - 1)} of beer on the wall.\n"
+  end
+
   def test_verse_1
     expected_verse =
       "99 bottles of beer on the wall, 99 bottles of beer.\n" +
@@ -23,7 +28,6 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def test_verse_97
-    skip('Get previous test passing')
     expected_verse =
       "2 bottles of beer on the wall, 2 bottles of beer.\n" +
         "Take one down and pass it around, 1 bottle of beer on the wall.\n"
