@@ -2,8 +2,9 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(starting_number_of_bottles = 99)
+    leftover_bottles = starting_number_of_bottles - 1
     "#{starting_number_of_bottles} bottles of beer on the wall, #{starting_number_of_bottles} bottles of beer.\n" +
-        "Take one down and pass it around, #{starting_number_of_bottles - 1} bottles of beer on the wall.\n"
+        "Take one down and pass it around, #{leftover_bottles} bottles of beer on the wall.\n"
   end
 
   def test_verse_1
@@ -20,6 +21,9 @@ class BottlesOfBeerSongTest < Minitest::Test
     # to get this passing, I created a verse_2 method
     # noticing that verse 1 and verse 2 use the same pattern,
     # I used the strategy of making the similar code more similar by interpolating the "starting_number_of_bottles" into each verse
+    # Now that the code is too similar, I removed verse_2 and replaced it with verse here
+    # one last change before moving onto next failing test. `starting_number_of_bottles - 1` does not make it clear what it is representing,
+    # so creating a variable for that called `leftover_bottles` makes it more clear
     expected_verse =
       "98 bottles of beer on the wall, 98 bottles of beer.\n" +
         "Take one down and pass it around, 97 bottles of beer on the wall.\n"
