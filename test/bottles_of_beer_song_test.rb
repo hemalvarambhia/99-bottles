@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
-  def verse(starting_number_of_bottles = 99)
+  def standard_verse(starting_number_of_bottles = 99)
     leftover_bottles = starting_number_of_bottles - 1
     "#{starting_number_of_bottles} bottles of beer on the wall, #{starting_number_of_bottles} bottles of beer.\n" +
         "Take one down and pass it around, #{leftover_bottles} bottles of beer on the wall.\n"
@@ -19,7 +19,7 @@ class BottlesOfBeerSongTest < Minitest::Test
       "99 bottles of beer on the wall, 99 bottles of beer.\n" +
         "Take one down and pass it around, 98 bottles of beer on the wall.\n"
 
-    assert_equal(expected_verse, verse(99))
+    assert_equal(expected_verse, standard_verse(99))
   end
 
   def test_verse_2
@@ -34,7 +34,7 @@ class BottlesOfBeerSongTest < Minitest::Test
       "98 bottles of beer on the wall, 98 bottles of beer.\n" +
         "Take one down and pass it around, 97 bottles of beer on the wall.\n"
 
-    assert_equal(expected_verse, verse(98))
+    assert_equal(expected_verse, standard_verse(98))
   end
 
   def test_verse_97
