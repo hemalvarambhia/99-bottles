@@ -7,9 +7,10 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take one down and pass it around, #{leftover_bottles} bottles of beer on the wall.\n"
   end
 
-  def two_bottles_left_verse
-    "2 bottles of beer on the wall, 2 bottles of beer.\n" +
-        "Take one down and pass it around, 1 bottle of beer on the wall.\n"
+  def two_bottles_left_verse(starting_number_of_bottles = 99)
+    leftover_bottles = starting_number_of_bottles - 1
+    "#{starting_number_of_bottles} bottles of beer on the wall, #{starting_number_of_bottles} bottles of beer.\n" +
+        "Take one down and pass it around, #{leftover_bottles} bottle of beer on the wall.\n"
   end
 
   def test_verse_1
@@ -38,10 +39,12 @@ class BottlesOfBeerSongTest < Minitest::Test
 
   def test_verse_97
     # to get the test to pass initially, I created a method to jsut return the verse string.
+    # The only difference between this verse and the other two are that the bottles noun is not plural
+    # The next step is to make the new verse method more similar to the original verse method
     expected_verse =
       "2 bottles of beer on the wall, 2 bottles of beer.\n" +
         "Take one down and pass it around, 1 bottle of beer on the wall.\n"
 
-    assert_equal(expected_verse, two_bottles_left_verse)
+    assert_equal(expected_verse, two_bottles_left_verse(2))
   end
 end
