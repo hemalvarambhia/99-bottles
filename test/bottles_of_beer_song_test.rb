@@ -7,8 +7,14 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def verse(num)
-    "#{getBottles(num)} of beer on the wall, #{getBottles(num)} of beer.\n" +
-      "Take one down and pass it around, #{getBottles(num - 1)} of beer on the wall.\n"
+    if num == 1
+      "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+        "Take it down and pass it around, No more bottles of beer on the wall.\n"
+    else
+      "#{getBottles(num)} of beer on the wall, #{getBottles(num)} of beer.\n" +
+        "Take one down and pass it around, #{getBottles(num - 1)} of beer on the wall.\n"
+    end
+
   end
 
   def test_verse_1
@@ -36,7 +42,6 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def test_verse_99
-    skip('Get previous test passing')
     expected_verse =
       "1 bottle of beer on the wall, 1 bottle of beer.\n" +
         "Take it down and pass it around, No more bottles of beer on the wall.\n"
