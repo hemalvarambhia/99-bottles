@@ -47,4 +47,22 @@ class BottlesOfBeerSongTest < Minitest::Test
 
     assert_equal(expected_verse, two_bottles_left_verse(2))
   end
+
+  def test_verse_99
+    skip('Get previous test passing')
+    expected_verse =
+      "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+        "Take it down and pass it around, no more bottles of beer on the wall.\n"
+
+    assert_equal(expected_verse, verse(1))
+  end
+
+  def test_last_verse
+    skip('Get previous test passing')
+    expected_verse =
+      "No more bottles of beer on the wall, no more bottles of beer.\n" +
+        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+
+    assert_equal(expected_verse, verse(0))
+  end
 end
