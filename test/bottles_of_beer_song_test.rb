@@ -19,9 +19,10 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take it down and pass it around, #{leftover_bottles} bottles of beer on the wall.\n"
   end
 
-  def no_bottles_left_verse
-    "No more bottles of beer on the wall, no more bottles of beer.\n" +
-        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+  def no_bottles_left_verse(starting_number_of_bottles = 99)
+    leftover_bottles = 99
+    "#{starting_number_of_bottles.capitalize} bottles of beer on the wall, #{starting_number_of_bottles} bottles of beer.\n" +
+        "Go to the store and buy some more, #{leftover_bottles} bottles of beer on the wall.\n"
   end
 
   def test_verse_1
@@ -71,10 +72,13 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def test_last_verse
+    # to get the test to pass, I created a new mthod and copied over the verse string
+    # I wanted the method names to be decriptive of the verse
+    # then after it passed, I extracted a few variables that were extracted for the other verses
     expected_verse =
       "No more bottles of beer on the wall, no more bottles of beer.\n" +
         "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
 
-    assert_equal(expected_verse, no_bottles_left_verse)
+    assert_equal(expected_verse, no_bottles_left_verse('no more'))
   end
 end
