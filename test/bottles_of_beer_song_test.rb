@@ -19,6 +19,11 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take it down and pass it around, #{leftover_bottles} bottles of beer on the wall.\n"
   end
 
+  def no_bottles_left_verse
+    "No more bottles of beer on the wall, no more bottles of beer.\n" +
+        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+  end
+
   def test_verse_1
     # to get this passing, I created a verse method with the exact string expected in the test
     expected_verse =
@@ -66,11 +71,10 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def test_last_verse
-    skip('Get previous test passing')
     expected_verse =
       "No more bottles of beer on the wall, no more bottles of beer.\n" +
         "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
 
-    assert_equal(expected_verse, verse(0))
+    assert_equal(expected_verse, no_bottles_left_verse)
   end
 end
