@@ -11,7 +11,7 @@ class BottlesOfBeerSongTest < Minitest::Test
         "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
     when 1
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
-        "Take it down and pass it around, no more bottles of beer on the wall.\n"
+        "Take it down and pass it around, #{quantity_and_bottles(number - 1).downcase} of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
