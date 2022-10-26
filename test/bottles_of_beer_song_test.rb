@@ -3,6 +3,9 @@ require 'minitest/autorun'
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
+    when 0
+      "No more bottles of beer on the wall, no more bottles of beer.\n" +
+        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     when 2
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
@@ -56,7 +59,6 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def test_last_verse
-    skip('Get previous test passing')
     expected_verse =
       "No more bottles of beer on the wall, no more bottles of beer.\n" +
         "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
