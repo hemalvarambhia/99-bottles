@@ -3,12 +3,16 @@ require 'minitest/autorun'
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     if number == 2
-      "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
     else
-      "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
     end
+  end
+
+  def quantity_and_bottles(number)
+    "#{number} bottles"
   end
 
   def test_verse_1
