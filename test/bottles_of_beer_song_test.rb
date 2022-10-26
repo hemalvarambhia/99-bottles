@@ -3,8 +3,8 @@ require 'minitest/autorun'
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     if number == 98
-      "98 bottles of beer on the wall, 98 bottles of beer.\n" +
-        "Take one down and pass it around, 97 bottles of beer on the wall.\n"
+      "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+        "Take one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
     else
       "99 bottles of beer on the wall, 99 bottles of beer.\n" +
         "Take one down and pass it around, 98 bottles of beer on the wall.\n"
