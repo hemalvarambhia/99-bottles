@@ -6,7 +6,7 @@ class BottlesOfBeerSongTest < Minitest::Test
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take one down and pass it around, #{number - 1} bottle of beer on the wall.\n"
     elsif number == 1
-      "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
         "Take it down and pass it around, no more bottles of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number)} of beer.\n" +
@@ -15,7 +15,11 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def quantity_and_bottles(number)
-    "#{number} bottles"
+    if number == 1
+      "1 bottle"
+    else
+      "#{number} bottles"
+    end
   end
 
   def test_verse_1
