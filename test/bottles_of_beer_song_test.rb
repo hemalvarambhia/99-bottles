@@ -3,23 +3,35 @@ require 'minitest/autorun'
 class BottlesOfBeerSongTest < Minitest::Test
 
   def getBottles(num)
-    num == 1 ? "#{num} bottle" : "#{num} bottles"
+    case num
+    when 1
+      "1 bottle"
+    when 0
+      "No more bottles"
+    when -1
+      "99 bottles"
+    else
+      "#{num} bottles"
+    end
+  end
+
+  def second_sentence_start(num)
+    case num
+    when 1
+      "Take it down and pass it around"
+    when 0
+      "Go to the store and buy some more"
+    else
+      "Take one down and pass it around"
+    end
   end
 
   def verse(num)
-    if num == 1
-      "1 bottle of beer on the wall, 1 bottle of beer.\n" +
-        "Take it down and pass it around, no more bottles of beer on the wall.\n"
-    elsif num == 0
-      "No more bottles of beer on the wall, no more bottles of beer.\n" +
-        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
-    else
-      "#{getBottles(num)} of beer on the wall, #{getBottles(num)} of beer.\n" +
-        "Take one down and pass it around, #{getBottles(num - 1)} of beer on the wall.\n"
-    end
-
+    "#{getBottles(num)} of beer on the wall, #{getBottles(num).downcase} of beer.\n" +
+      second_sentence_start(num) + ", #{getBottles(num - 1).downcase} of beer on the wall.\n"
   end
 
+  #Tests starts
   def test_verse_1
     expected_verse =
       "99 bottles of beer on the wall, 99 bottles of beer.\n" +
