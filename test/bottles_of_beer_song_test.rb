@@ -1,49 +1,13 @@
 require 'minitest/autorun'
+require_relative '../lib/song_builder'
+
 
 class BottlesOfBeerSongTest < Minitest::Test
 
-  def bottles(num)
-    case num
-    when 1
-      "1 bottle"
-    when 0
-      "No more bottles"
-    when -1
-      "99 bottles"
-    else
-      "#{num} bottles"
-    end
-  end
-
-  def bottlesOfBeer(num)
-    bottles(num) +  " of beer"
-  end
-
-  def second_sentence_start(num)
-    case num
-    when 1
-      "Take it "
-    when 0
-      "Go to the "
-    else
-      "Take one "
-    end
-  end
-
-  def second_sentence(num)
-    second_sentence_start(num) + passOrBuy(num)
-  end
-
-  def passOrBuy(num)
-    num == 0 ? "store and buy some more" : "down and pass it around"
-  end
-
   def verse(num)
-    "#{bottlesOfBeer(num)} on the wall, #{bottlesOfBeer(num).downcase}.\n" +
-      second_sentence(num) + ", #{bottlesOfBeer(num - 1).downcase} on the wall.\n"
+    SongBuilder.new(num).build
   end
 
-  #Tests starts
   def test_verse_1
     expected_verse =
       "99 bottles of beer on the wall, 99 bottles of beer.\n" +
