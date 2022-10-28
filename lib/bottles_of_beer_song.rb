@@ -20,7 +20,19 @@ class CommonSong
   end
 
   def second_sentence_start
-    "Take one down and pass it around"
+    second_sentence_first_word + second_sentence_second_word + second_sentence_action
+  end
+
+  def second_sentence_first_word
+    "Take "
+  end
+
+  def second_sentence_second_word
+    "one"
+  end
+
+  def second_sentence_action
+    " down and pass it around"
   end
 
   def second_sentence_end
@@ -52,7 +64,7 @@ class NoBottlesLeftSong < CommonSong
 end
 
 class OneBottleLeftSong < CommonSong
-  def second_sentence_start
-      "Take it down and pass it around"
+  def second_sentence_second_word
+    "it"
   end
 end
