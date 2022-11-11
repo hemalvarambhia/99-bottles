@@ -5,16 +5,24 @@ class BottlesOfBeerSongTest < Minitest::Test
     case number
     when 0
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "Go to the store and buy some more, #{quantity_and_bottles(99).downcase} of beer on the wall.\n"
+        "Go to the store and buy some more, #{quantity_and_bottles(left_over_bottles(number)).downcase} of beer on the wall.\n"
     when 1
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "Take it down and pass it around, #{quantity_and_bottles(number - 1).downcase} of beer on the wall.\n"
+        "Take it down and pass it around, #{quantity_and_bottles(left_over_bottles(number)).downcase} of beer on the wall.\n"
     when 2
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "Take one down and pass it around, #{quantity_and_bottles(number - 1).downcase} of beer on the wall.\n"
+        "Take one down and pass it around, #{quantity_and_bottles(left_over_bottles(number)).downcase} of beer on the wall.\n"
     else
       "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
-        "Take one down and pass it around, #{quantity_and_bottles(number - 1).downcase} of beer on the wall.\n"
+        "Take one down and pass it around, #{quantity_and_bottles(left_over_bottles(number)).downcase} of beer on the wall.\n"
+    end
+  end
+
+  def left_over_bottles(number)
+    if number == 0
+      99
+    else
+      number - 1
     end
   end
 
