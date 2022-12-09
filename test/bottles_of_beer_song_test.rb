@@ -2,24 +2,23 @@ require 'minitest/autorun'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    case number
-    when 0
-      first_sentence(number) +
-        "Go to the store and buy some more, #{left_over_bottles(number).downcase} of beer on the wall.\n"
-    when 1
-      first_sentence(number) +
-        "Take it down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
-    else
-      first_sentence(number) +
-        "Take one down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
-    end
+    first_sentence(number) + second_sentence(number)
   end
 
   def first_sentence(number)
     "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n"
   end
 
-
+  def second_sentence(number)
+    case number
+    when 0
+        "Go to the store and buy some more, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+    when 1
+        "Take it down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+    else
+        "Take one down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+    end
+  end
 
   def left_over_bottles(number)
     if number == 0
