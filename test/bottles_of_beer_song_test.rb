@@ -40,13 +40,17 @@ class BottlesOfBeerSongTest < Minitest::Test
 
   def quantity_and_bottles(number)
     if number == 0
-      "No more bottles"
-    elsif number == 2
-      "2 bottles"
-    elsif number == 1
-      "1 bottle"
+      "No more #{bottles(number)}"
     else
-      "#{number} bottles"
+      "#{number} #{bottles(number)}"
+    end
+  end
+
+  def bottles(number)
+    if number == 1
+      "bottle"
+    else
+      "bottles"
     end
   end
 
