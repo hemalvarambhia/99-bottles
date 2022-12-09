@@ -4,16 +4,22 @@ class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
     when 0
-      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
+      first_sentence(number) +
         "Go to the store and buy some more, #{left_over_bottles(number).downcase} of beer on the wall.\n"
     when 1
-      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
+      first_sentence(number) +
         "Take it down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
     else
-      "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n" +
+      first_sentence(number) +
         "Take one down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
     end
   end
+
+  def first_sentence(number)
+    "#{quantity_and_bottles(number)} of beer on the wall, #{quantity_and_bottles(number).downcase} of beer.\n"
+  end
+
+
 
   def left_over_bottles(number)
     if number == 0
