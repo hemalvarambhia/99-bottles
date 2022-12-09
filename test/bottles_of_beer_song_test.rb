@@ -10,13 +10,17 @@ class BottlesOfBeerSongTest < Minitest::Test
   end
 
   def second_sentence(number)
+    action(number) + ", #{left_over_bottles(number).downcase} of beer on the wall.\n"
+  end
+
+  def action(number)
     case number
     when 0
-        "Go to the store and buy some more, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+      "Go to the store and buy some more"
     when 1
-        "Take it down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+      "Take it down and pass it around"
     else
-        "Take one down and pass it around, #{left_over_bottles(number).downcase} of beer on the wall.\n"
+      "Take one down and pass it around"
     end
   end
 
