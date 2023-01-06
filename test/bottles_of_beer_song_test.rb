@@ -3,7 +3,7 @@ require_relative '../lib/generic_verse'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    first_sentence(number) + second_sentence(number)
+    GenericVerse.new.verse(number)
   end
 
   def first_sentence(number)
