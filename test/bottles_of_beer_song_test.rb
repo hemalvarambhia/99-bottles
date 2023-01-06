@@ -1,9 +1,15 @@
 require 'minitest/autorun'
 require_relative '../lib/generic_verse'
+require_relative '../lib/verse0'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
-    GenericVerse.new.verse(number)
+    case number
+    when 0
+      Verse0.new.verse(number)
+    else
+      GenericVerse.new.verse(number)
+    end
   end
 
   def test_verse_1
