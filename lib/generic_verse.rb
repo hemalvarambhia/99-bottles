@@ -5,7 +5,7 @@ class GenericVerse
   end
 
   def verse(number)
-    first_sentence(number) + second_sentence(number)
+    first_sentence(@number) + second_sentence(@number)
   end
 
   def first_sentence(number)
