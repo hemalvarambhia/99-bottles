@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require_relative '../lib/generic_verse'
 
 class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
