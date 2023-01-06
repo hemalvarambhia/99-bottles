@@ -6,9 +6,9 @@ class BottlesOfBeerSongTest < Minitest::Test
   def verse(number)
     case number
     when 0
-      Verse0.new(number).verse(number)
+      Verse0.new.verse(number)
     else
-      GenericVerse.new(number).verse(number)
+      GenericVerse.new.verse(number)
     end
   end
 
