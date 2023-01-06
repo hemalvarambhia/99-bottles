@@ -1,5 +1,9 @@
 class GenericVerse
 
+  def initialize(number)
+    @number = number
+  end
+
   def verse(number)
     first_sentence(number) + second_sentence(number)
   end
